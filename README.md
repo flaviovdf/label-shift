@@ -152,12 +152,17 @@ class MXNetWrapper(object):
 ```
 
 
-## Links to other implementations
+## Notebooks
 
 The notebooks execute several variations of the method. For some of them, you may need
 the dataset from https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000/.
 
+## Failing Loudly
+
+A follow up paper suggests reducing the dimensionality of X first. This is trivial todo
+using sklearn pipeline if need be.
+
 ## Links to other implementations
 
-1. Original https://github.com/zackchase/label_shift
-1. Failing loudly https://github.com/steverab/failing-loudly
+1. We made use of code from the original paper https://github.com/zackchase/label_shift
+1. Follow up paper where dimensionality reduction is done first (easy with our code) https://github.com/steverab/failing-loudly
