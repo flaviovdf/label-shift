@@ -72,9 +72,21 @@ print(metrics.classification_report(y_test, y_pred))
 Wrap your code in a class that supports the `fit/predict` methods from sklearn.
 It's not ideal but doable for now.
 
-Example below. Be warned that this is a hack!
+Example below. Be warned that this is a hack with a lot of magic numbers!
 
 ```python
+
+from mxnet import autograd
+from mxnet import gluon
+from mxnet import init
+from mxnet import nd
+
+from mxnet.gluon import data as gdata
+from mxnet.gluon import loss as gloss
+from mxnet.gluon import nn
+from mxnet.gluon import utils
+
+
 def load_array(features, labels, batch_size, is_train=True):
 
     transform = gdata.vision.transforms.Compose([
@@ -137,3 +149,14 @@ class MXNetWrapper(object):
             yres.extend(yb)
         return np.array(yres, dtype='i')
 ```
+
+
+## Links to other implementations
+
+The notebooks execute several variations of the method. For some of them, you may need
+the dataset from https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000/.
+
+## Links to other implementations
+
+1. Original https://github.com/zackchase/label_shift
+1. Failing loudly https://github.com/steverab/failing-loudly
