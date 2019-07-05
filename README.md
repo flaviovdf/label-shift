@@ -43,7 +43,7 @@ improve predictions via the ERM (see paper). Note that the ERM is based on
 a weighted loss-function. I'm not sure how every sklearn classifier explores
 the `class_weight` attribute. Test before deploying.
 
-```
+```python
 from sklearn import linear_model import LogisticRegressionCV
 from label_shift.skwrapper import LabelShiftDetectorSKLearn
 
@@ -74,7 +74,7 @@ It's not ideal but doable for now.
 
 Example below. Be warned that this is a hack!
 
-```
+```python
 def load_array(features, labels, batch_size, is_train=True):
 
     transform = gdata.vision.transforms.Compose([
