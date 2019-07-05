@@ -98,6 +98,7 @@ def load_array(features, labels, batch_size, is_train=True):
     dataset = gluon.data.ArrayDataset(features, labels).transform_first(transform)
     return gluon.data.DataLoader(dataset, batch_size, shuffle=is_train)
 
+
 class MXNetWrapper(object):
 
     def __init__(self):
