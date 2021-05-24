@@ -1,6 +1,6 @@
 # SKLearn Compatible Label Shift Detector
 
-This is mostly a simple implementation of the paper:
+Basically a simple implementation of the paper:
 **Detecting and Correcting for Label Shift with Black Box Predictors**.
 This code was created as wrapper to a [scikit-learn](http://scikit-learn.org)
 classifier. It's mostly used for teaching purposes.
